@@ -1,0 +1,64 @@
+/* GalleryPage.css */
+.gallery-page {
+  padding: 20px;
+  text-align: center;
+  background: url('https://static.vecteezy.com/system/resources/previews/015/426/081/non_2x/abstract-black-metallic-cyber-banner-geometric-design-modern-futuristic-technology-background-vector.jpg') no-repeat center center/cover; /* Menggunakan gambar latar belakang */
+  background-size: cover; /* Pastikan gambar mencakup seluruh halaman */
+  background-attachment: fixed; /* Membuat gambar latar tetap saat scrolling */
+}
+
+.gallery-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.7); /* Efek neon pada judul */
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Pastikan nama berada di tengah */
+  background: rgba(255, 255, 255, 0.1); /* Memberikan efek semi-transparan */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Menambahkan bayangan lebih besar pada hover */
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05); /* Efek pembesaran gambar saat hover */
+}
+
+.gallery-name {
+  margin-top: 10px; /* Menambahkan jarak antara gambar dan nama */
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px; /* Memberikan efek jarak antar huruf */
+}
+
+.gallery-description {
+  font-size: 1rem;
+  color: #fff; /* Warna putih untuk deskripsi */
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5px; /* Jarak atas untuk deskripsi */
+  text-align: center; /* Menyelaraskan deskripsi di tengah */
+}

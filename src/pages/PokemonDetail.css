@@ -1,0 +1,168 @@
+/* Kontainer utama untuk halaman detail */
+.pokemon-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    background: url("https://png.pngtree.com/background/20230425/original/pngtree-mountain-fuji-in-spring-picture-image_2471060.jpg") no-repeat center center fixed;
+    background-size: cover;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Font modern */
+    position: relative;
+}
+
+/* Efek overlay lembut */
+.pokemon-detail-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85); /* Latar belakang transparan */
+    backdrop-filter: blur(10px); /* Efek blur */
+    z-index: -1;
+}
+
+/* Gaya untuk gambar Pokémon */
+.pokemon-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-image img {
+    width: 80%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.5); /* Bingkai transparan */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Bayangan elegan */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.pokemon-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Gaya untuk detail Pokémon */
+.pokemon-detail {
+    flex: 2;
+    background: rgba(255, 255, 255, 0.7); /* Transparansi modern */
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Bingkai lembut */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px); /* Efek blur dalam kotak */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.pokemon-detail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-detail h2 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    color: #2c3e50; /* Warna modern */
+    text-transform: capitalize;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Gaya daftar atribut */
+.pokemon-detail ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.pokemon-detail ul li {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    color: #2c3e50; /* Warna font modern */
+    position: relative;
+    padding-left: 30px;
+    display: flex; /* Gunakan Flexbox */
+    align-items: center; /* Pastikan ikon sejajar vertikal dengan teks */
+    gap: 10px; /* Jarak antara ikon dan teks */
+}
+
+.pokemon-detail ul li::before {
+    content: "⚡"; /* Ikon modern */
+    color: #f39c12; /* Warna mencolok */
+    font-size: 1.5rem;
+    line-height: 1; /* Tinggi garis sama dengan tinggi ikon */
+    display: flex;
+    align-items: center; /* Pastikan ikon berada di tengah */
+}
+
+
+/* Subjudul dalam detail */
+.pokemon-detail h3 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Gaya untuk tinggi dan berat */
+.pokemon-detail p {
+    font-size: 1rem;
+    color: #34495e;
+    margin: 10px 0;
+    line-height: 1.8;
+    font-style: italic; /* Sentuhan elegan */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .pokemon-detail-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .pokemon-image, .pokemon-detail {
+        flex: none;
+        width: 90%;
+    }
+
+    .pokemon-image img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .pokemon-detail {
+        text-align: center;
+    }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 480px) {
+    .pokemon-detail h2 {
+        font-size: 2rem;
+    }
+
+    .pokemon-detail h3 {
+        font-size: 1.3rem;
+    }
+
+    .pokemon-detail ul li {
+        font-size: 1rem;
+    }
+
+    .pokemon-detail p {
+        font-size: 0.95rem;
+    }
+}

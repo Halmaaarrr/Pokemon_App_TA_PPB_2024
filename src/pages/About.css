@@ -1,0 +1,131 @@
+/* about.css */
+
+/* Menambahkan box-sizing global untuk menghindari elemen yang terpotong */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container utama dengan latar belakang baru hanya untuk halaman About */
+.about-container {
+    background: url('https://img.freepik.com/free-photo/japan-background-digital-art_23-2151546139.jpg') no-repeat center center fixed;
+    background-size: cover; /* Pastikan latar belakang selalu menutupi layar */
+    background-attachment: fixed; /* Menjaga latar belakang tetap statis saat scroll */
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* Efek blur pada latar belakang */
+    -webkit-backdrop-filter: blur(10px); /* Untuk mendukung Safari */
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+    min-height: 100vh; /* Memastikan container memiliki tinggi minimal setinggi layar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Animasi fade-in untuk container */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header section dengan gaya Jepang */
+.about-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #ffcc00; /* Nuansa Pokémon yang cerah */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Deskripsi header dengan warna terang */
+.about-header p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+/* Link yang terlihat seperti tombol dengan efek hover */
+.about-header a {
+    color: #ff5c8d;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: rgba(255, 92, 141, 0.2);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-header a:hover {
+    background-color: #ff5c8d;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Konten tambahan dengan nuansa Pokémon */
+.about-content h3 {
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #ff5c8d;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Daftar dengan efek hover dan font lebih besar */
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content ul li {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.about-content ul li:hover {
+    color: #ff5c8d;
+}
+
+.about-content ul li strong {
+    color: #ffcc00;
+}
+
+/* Teks deskripsi dengan warna lembut dan ukuran font yang nyaman dibaca */
+.about-content p {
+    font-size: 1.2rem;
+    color: #d0d0d0;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+    }
+
+    .about-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .about-content ul li {
+        font-size: 1.1rem;
+    }
+}
